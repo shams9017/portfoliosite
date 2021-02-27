@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "VQWICENa35zcz1sUxf3vKj69i5LOVwpQgAYnuiTra4jq5gIQDopjul5+yGgR92AVWRByKaX3e+87BtfjQjKeZQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Shams\\source\\repos\\PortfolioSite\\PortfolioSite.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Shams\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.9\\microsoft.visualstudio.azure.containers.tools.targets.1.10.9.nupkg.sha512"
+  ],
+  "logs": []
+}
