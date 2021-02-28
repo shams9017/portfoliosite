@@ -1,31 +1,32 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Shams A. - Portfolio";
 }
 
-<link href="@Url.Content("~/css/site.css")" rel="stylesheet" type="text/css" />
- <link href="@Url.Content("~/lib/bootstrap/dist/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />
+
+ <link href="@Url.Content("~/lib/bootstrap/dist/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />\
+ <link href="@Url.Content("~/css/site.css")" rel="stylesheet" type="text/css" />
 
  <div class="main-page">
-     <nav class="navbar navbar-expand-lg ">
+
+
+     <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="navbar-full">
          <div>
              <img id="logo-thumb" src="/assets/images/logo_thumb.png" alt="Logo" />
          </div>
 
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-             <span class="navbar-toggler-icon"></span>
          </button>
          <div class="collapse navbar-collapse" id="navbarNav">
              <ul class="navbar-nav">
                  <li class="nav-item active">
-                     <a class="btn btn-outline-success border-0" href="#">Portfolio<span class="sr-only">(current)</span></a>
+                     <a id="port-font" class="btn btn-outline-success border-0" href="#portfolio">Portfolio<span class="sr-only">(current)</span></a>
                  </li>
                  <li class="nav-item">
-                     <a class="btn btn-outline-success border-0" href="#">About Me</a>
+                     <a id="about-font" class="btn btn-outline-success border-0" href="#about">About Me</a>
                  </li>
                  <li class="nav-item">
-                     <button id="myBtn" class="btn btn-outline-success border-0" type="button">Contact</button>
+                     <a id="contact-font" class="btn btn-outline-success border-0" href="#Contact">Contact</a>
                  </li>
 
              </ul>
@@ -42,7 +43,8 @@
 
                  <!-- Masthead Heading-->
                  <h1 class="masthead-heading text-uppercase mb-0">Shams Ahsanullah</h1>
-                 <h2 class="masthead-subheading text-uppercase mb-0">Full Stack Web Developer</h2>
+                 <h2 class="masthead-subheading text-uppercase mb-0">Software Developer</h2>
+                 <h2 class="masthead-subheading text-uppercase mb-0">Full Stack Web Development</h2>
                  <!-- Icon Divider-->
                  <div class="divider-custom divider-light">
                      <div class="divider-custom-line"></div>
@@ -53,35 +55,49 @@
              </div>
          </div>
      </div>
+
+     <!-- Modal-->
+     <div id="myModal" class="modal">
+
+         <!-- Modal content -->
+         <div class="modal-content">
+             <span class="close">&times;</span>
+             <iframe id="iframe" src="" width="640" height="480" allowfullscreen></iframe>
+         </div>
+
+     </div>
+
      <!-- Portfolio-->
      <section class="page-section portfolio" id="portfolio">
          <div class="container">
              <h2 id="portfolio-heading" class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-             <!-- Icon Divider-->
-             <div class="divider-custom">
-                 <div class="divider-custom-line"></div>
-                 <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                 <div class="divider-custom-line"></div>
-             </div>
+     
              <div class="row justify-content-center">
-                 <div class="col-md-6 col-lg-4 mb-5">
-                     <div class="portfolio-item mx-auto">
+                 <div id="flutter-app" class="col-sm-5 mb-5" >
+                     <div class="portfolio-item mx-auto" onclick="openVideo(this);">
                          <img id="item-one" src="/assets/images/flutter_app_screenshot.jpg" alt="Card image">
                          <div class="centered">Flutter App</div>
                      </div>
 
                  </div>
-                 <div class="col-md-6 col-lg-4 mb-5">
+                 <div id="web-api" class="col-sm-5 mb-5" onclick="openVideo(this);">
                      <div class="portfolio-item mx-auto">
                          <img id="item-two" src="/assets/images/web_api_json.png" alt="Card image">
                          <div class="centered">Web API</div>
                      </div>
 
                  </div>
-                 <div class="col-md-6 col-lg-4 mb-5">
+                 <div class="col-sm-5 mb-5">
                      <div class="portfolio-item mx-auto">
                          <img id="item-three" src="/assets/images/erace.png" alt="Card image">
                          <div class="centered">ASP.NET Web App</div>
+                     </div>
+
+                 </div>
+                 <div id="pygame" class="col-sm-5 mb-5" >
+                     <div class="portfolio-item mx-auto" onclick="openVideo(this);">
+                         <img id="item-three" src="/assets/images/python_memory.png" alt="Card image">
+                         <div class="centered">Python Game</div>
                      </div>
 
                  </div>
@@ -94,22 +110,23 @@
      <!-- About Me-->
      <section class="page-section portfolio" id="about">
          <div class="container">
-             
-             <!-- Icon Divider-->
-             <div id="about-content" >
+
+             <div id="about-content">
                  <h2 id="portfolio-heading" class="page-section-heading text-center text-uppercase text-secondary mb-0">About Me</h2>
                  <div class="row">
-                     <div class="col-lg-4 ml-auto"><p class="lead">Freelancer is a free bootstrap theme created by Start Bootstrap. The download includes the complete source files including HTML, CSS, and JavaScript as well as optional SASS stylesheets for easy customization.</p></div>
-                     <div class="col-lg-4 mr-auto"><p class="lead">You can create your own custom avatar for the masthead, change the icon in the dividers, and add your email address to the contact form to make it fully functional!</p></div>
+                     <div class="col-lg-4 ml-auto"><p class="lead">I’m a Software Developer with skills for Full-stack development. I’m a soon-to-be graduate from Northern Alberta Institute of Technology (NAIT) with a GPA of 4.0. I’m currently working on my Capstone project where I’m building a web app for Oil & Gas Industry professionals. I have built personal projects in different tech stacks, with a focus in .NET backend development.</p></div>
+                     <div class="col-lg-4 mr-auto"><p class="lead">For front-end development, I’m proficient in Razor pages, vanilla JS, jQuery, and Bootstrap. Currently, I am looking to develop my skills in React and Node.JS. In case of programming languages, I'm quite comfortable C#, Java, JavaScript and Python. For backend development, I prefer .NET Core and SQL Server. Feel free to browse through my projects and contact me! </p></div>
                  </div>
              </div>
-                 
+
          </div>
      </section>
 
 
-
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+     <script type="text/javascript" src="~/js/site.js"></script>
+
  </div>
 
 
