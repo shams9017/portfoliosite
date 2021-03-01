@@ -1,0 +1,121 @@
+﻿.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: block;
+    padding-top: 60px;
+}
+
+    .sidenav a {
+        display: block;
+        padding: 8px 8px 8px 28px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #fff;
+        white-space: nowrap;
+    }
+
+.divider {
+    width: 225px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    line-height: 0.1em;
+    
+    margin-top: 50px;
+    margin-bottom: 15px;
+    background: #fff;
+    margin-left: 10px;
+    display: block;
+}
+
+.sidenav img {
+    margin-left: 80px;
+    height: 100px;
+    width: auto;
+}
+.heading-skills {
+    font-size: 20px; 
+    display: block;
+    padding: 8px 8px 12px 28px;
+    text-decoration: none;
+    color: #fff;
+    white-space: nowrap;
+    
+}
+
+.lang-floaters {
+    margin-left: 20px;
+}
+
+.float-skills {
+    float: left;
+    white-space: nowrap;
+    display: block;
+}
+.float-links {
+    margin-left: 30px;
+    float: left;
+    white-space: nowrap;
+    display: block;
+    text-align: left;
+}
+
+.float-links a {
+
+    font-size: 16px;
+    color: white;  
+    white-space: nowrap;
+    display: inline;
+}
+    .float-links a:hover {
+
+        color: #79abf9;
+
+    }
+
+
+#python {
+    margin-right: 20px;
+}
+#CSS {
+    margin-right: 60px;
+}
+#Bash {
+    margin-right: 50px;
+}
+#sql {
+    margin-right: 50px;
+}
+#visual {
+    margin-right: 50px;
+}
+#android {
+    margin-right: 50px;
+}
+#json {
+    margin-right: 50px;
+}
+.heading-editors {
+    font-size: 20px;
+    display: block;
+    padding: 8px 8px 12px 28px;
+    text-decoration: none;
+    color: #fff;
+    white-space: nowrap;
+}
+.section-divider {
+    width: 225px;
+    border-bottom: 1px solid;
+    line-height: 0.1em;
+    margin: 5px 0 5px;
+    margin-left: 10px;
+    display: inline-block;
+    float: left;
+}
+

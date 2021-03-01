@@ -7,31 +7,98 @@
 
  <link href="@Url.Content("~/lib/bootstrap/dist/css/bootstrap.min.css")" rel="stylesheet" type="text/css" />\
  <link href="@Url.Content("~/css/site.css")" rel="stylesheet" type="text/css" />
+ <link href="@Url.Content("~/css/sidenav.css")" rel="stylesheet" type="text/css" />
+ <link href="@Url.Content("~/css/itemsmodal.css")" rel="stylesheet" type="text/css" />
 
  <div class="main-page">
 
+     <!-- Side Nav-->
+     <div id="sideNav" class="sidenav">
+         <img class="myself" src="/assets/images/myself.png" alt="Card image">
+         <div id="sideNavContent">
+             <a href="#">Shams&nbsp;Ahsanullah</a>
+          
+             <div class="float-links">
+                 <a class="" Style="width: 120px;" href="https://www.linkedin.com/in/shams-ahsanullah-95115483/">Linkedin
+                 </a>
+                 <a id="github" class="" Style="width: 90px;" href="https://github.com/shams9017">GitHub
+                 </a>
+
+             </div>
+             <div class="divider"><span></span></div>
+             <div class="heading-skills">Skill Summary</></div>
+
+             <div class="lang-floaters">
+                 <div class="float-skills">
+                     <div class="btn btn-outline-light alert-light border-0" Style="width: 50px;">C#</div>
+                     <div class="btn btn-outline-light alert-light border-0" Style="width: 50px;">Java</div>
+                     <div id="python" class="btn btn-outline-light border-0 alert-light" Style="width: 80px;">Python</div>
+                 </div>
+                 <div class="section-divider"><span></span></div>
+                 <div class="float-skills">
+                     <div class="btn btn-outline-light border-0 alert-light" Style="width: 60px;">HTML</div>
+                     <div class="btn btn-outline-light border-0 alert-light" Style="width: 90px;">Bootstrap</div>
+                     <div id="CSS" class="btn btn-outline-light border-0 alert-light" Style="width: 60px;">CSS</div>
+                 </div>
+                 <div class="section-divider"><span></span></div>
+                 <div class="float-skills">
+                     <div class="btn btn-outline-light border-0 alert-light" Style="width: 100px;">JavaScript</div>
+                     <div id="Bash" class="btn btn-outline-light border-0 alert-light" Style="width: 100px;">Bash&nbsp;Script</div>
+                 </div>
+                 <div class="section-divider"><span></span></div>
+                 <div class="float-skills">
+                     <div id="sql" class="btn btn-outline-light border-0 alert-light" Style="width: 100px;">SQL&nbsp;Server</div>
+                 </div>
+                 <div class="section-divider"><span></span></div>
+                 <div class="float-skills">
+                     <div class="btn btn-outline-light alert-light border-0" Style="width: 90px;">REST API</div>
+                     <div id="json" class="btn btn-outline-light alert-light border-0" Style="width: 54px;">JSON</div>
+
+                 </div>
+             </div>
+             <div class="section-divider"><span></span></div>
+
+             <div class="lang-floaters">
+
+                 <div class="float-skills">
+                     <div class="btn btn-outline-light alert-light border-0" Style="width: 100px;">VSCode</div>
+                     <div id="visual" class="btn btn-outline-light alert-light border-0" Style="width: 120px;">Visual Studio</div>
+
+                 </div>
+                 <div class="section-divider"><span></span></div>
+                 <div class="float-skills">
+                     <div id="android" class="btn btn-outline-light border-0 alert-light" Style="width: 125px;">Android Studio</div>
+                 </div>
+
+             </div>
+             <div class="section-divider"><span></span></div>
+
+         </div>
+
+     </div>
 
      <nav class="navbar navbar-expand-lg text-uppercase fixed-top" id="navbar-full">
-         <div>
+         <div class="ml-5">
              <img id="logo-thumb" src="/assets/images/logo_thumb.png" alt="Logo" />
          </div>
 
-         </button>
          <div class="collapse navbar-collapse" id="navbarNav">
-             <ul class="navbar-nav">
+             <ul class="navbar-nav ml-3">
                  <li class="nav-item active">
-                     <a id="port-font" class="btn btn-outline-success border-0" href="#portfolio">Portfolio<span class="sr-only">(current)</span></a>
+                     <a id="port-font" class="btn btn-outline-light border-0" href="#portfolio">Portfolio<span class="sr-only">(current)</span></a>
                  </li>
                  <li class="nav-item">
-                     <a id="about-font" class="btn btn-outline-success border-0" href="#about">About Me</a>
+                     <a id="about-font" class="btn btn-outline-light border-0" href="#about">About Me</a>
                  </li>
                  <li class="nav-item">
-                     <a id="contact-font" class="btn btn-outline-success border-0" href="#Contact">Contact</a>
+                     <a id="contact-font" class="btn btn-outline-light border-0" href="#contact">Contact</a>
                  </li>
 
              </ul>
          </div>
      </nav>
+
+
 
      <div class="card bg-light text-white">
          <div class="backdrop">
@@ -71,9 +138,9 @@
      <section class="page-section portfolio" id="portfolio">
          <div class="container">
              <h2 id="portfolio-heading" class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-     
+
              <div class="row justify-content-center">
-                 <div id="flutter-app" class="col-sm-5 mb-5" >
+                 <div id="flutter-app" class="col-sm-5 mb-5">
                      <div class="portfolio-item mx-auto" onclick="openVideo(this);">
                          <img id="item-one" src="/assets/images/flutter_app_screenshot.jpg" alt="Card image">
                          <div class="centered">Flutter App</div>
@@ -94,7 +161,7 @@
                      </div>
 
                  </div>
-                 <div id="pygame" class="col-sm-5 mb-5" >
+                 <div id="pygame" class="col-sm-5 mb-5">
                      <div class="portfolio-item mx-auto" onclick="openVideo(this);">
                          <img id="item-three" src="/assets/images/python_memory.png" alt="Card image">
                          <div class="centered">Python Game</div>
@@ -108,20 +175,52 @@
          </div>
      </section>
      <!-- About Me-->
-     <section class="page-section portfolio" id="about">
+     <section class="page-section about" id="about">
          <div class="container">
 
              <div id="about-content">
                  <h2 id="portfolio-heading" class="page-section-heading text-center text-uppercase text-secondary mb-0">About Me</h2>
                  <div class="row">
-                     <div class="col-lg-4 ml-auto"><p class="lead">I’m a Software Developer with skills for Full-stack development. I’m a soon-to-be graduate from Northern Alberta Institute of Technology (NAIT) with a GPA of 4.0. I’m currently working on my Capstone project where I’m building a web app for Oil & Gas Industry professionals. I have built personal projects in different tech stacks, with a focus in .NET backend development.</p></div>
-                     <div class="col-lg-4 mr-auto"><p class="lead">For front-end development, I’m proficient in Razor pages, vanilla JS, jQuery, and Bootstrap. Currently, I am looking to develop my skills in React and Node.JS. In case of programming languages, I'm quite comfortable C#, Java, JavaScript and Python. For backend development, I prefer .NET Core and SQL Server. Feel free to browse through my projects and contact me! </p></div>
+                     <div class="col-lg-4 ml-auto"><p class="lead">I’m a Software Developer with skills for Full-stack development. I’m a graduate from Northern Alberta Institute of Technology (NAIT) with a GPA of 4.0. I’m currently working on my Capstone project where I’m building a web app for Oil & Gas Industry professionals. I have built personal projects in different tech stacks, with a focus in .NET backend development.</p></div>
+                     <div class="col-lg-4 mr-auto"><p class="lead">For front-end development, I’m proficient in Razor pages, vanilla JS, jQuery, and Bootstrap. Currently, I'm looking to develop my skills in React and Node.JS. In case of programming languages, I'm quite comfortable with C#, Java, JavaScript and Python. For backend development, I prefer .NET Core and SQL Server. Feel free to browse through my projects and contact me! </p></div>
                  </div>
              </div>
 
          </div>
      </section>
 
+     <!-- Contact Me-->
+     <section class="page-section contact" id="contact">
+         <div class="container justify-content-sm-center">
+             <h2 id="portfolio-heading" class="page-section-heading text-center text-uppercase text-secondary mb-0">Contact Me</h2>
+             <div id="contact-me">
+                 <form>
+                     <div class="form-group">
+                         <label for="name">Name</label>
+                         <input type="text" class="form-control" id="name" placeholder="Your Name">
+                     </div>
+                     <div class="form-group">
+                         <label for="email">Email address</label>
+                         <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                     </div>
+                     <div class="form-group">
+                         <label for="message">Message</label>
+                         <input type="text" class="form-control" id="message" placeholder="Your Message">
+                     </div>
+
+                     <button type="submit" class="btn btn-primary">Submit</button>
+                 </form>
+             </div>
+
+         </div>
+     </section>
+
+     <footer class="footer text-center">
+         <div class="container">
+             &copy; 2021 - Shams Ahsanullah - <a asp-area="" asp-page="/Privacy">Privacy</a>
+         </div>
+     </footer>
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
      <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>

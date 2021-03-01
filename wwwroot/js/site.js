@@ -64,12 +64,25 @@ function openVideo(element) {
         }
     }
 
-   
-
 }
 
 
-
-
+// sidenav trigger on hover
+$("body").on("mousemove", function (event) {
+    if (event.pageX < 50) {
+        document.getElementById("sideNav").style.width = "250px";
+       // document.getElementById("sideNavContent").style.width = "250px";
+        
+        //document.getElementById("sideNavContent").classList.remove("fadeOut"); // for animation
+       
+    }
+    else if (event.pageX > 250) {
+        document.getElementById("sideNav").style.width = "0";
+        //document.getElementById("sideNavContent").style.width = "0";
+        //document.getElementById("sideNavContent").classList.add("fadeOut");
+        //document.getElementById("sideNavContent").style.left = "0"// for animation
+        
+    }
+});
 
 

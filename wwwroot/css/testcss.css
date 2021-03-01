@@ -75,20 +75,20 @@ body {
     bottom: 0;
     width: 100%;
     white-space: nowrap;
-    line-height: 60px; 
+    line-height: 60px;
 }
 
 .navbar-expand-lg {
     height: 85px;
     background-color: rgb(0, 0, 0);
-    transition: 0.4s; 
-    position: fixed; 
+    transition: 0.4s;
+    position: fixed;
 }
 
 .backdrop {
-    height: 650px; 
-    overflow: hidden; 
-    margin: 0; 
+    height: 650px;
+    overflow: hidden;
+    margin: 0;
 }
 
     .backdrop img {
@@ -98,7 +98,7 @@ body {
 .masthead-heading {
     margin-top: 225px;
     font-size: 75px;
-    font-family: Arial;  
+    font-family: Arial;
 }
 
 .masthead-subheading {
@@ -137,12 +137,12 @@ body {
 
 
 #item-one, #item-two, #item-three {
-    width: 350px; 
+    width: 350px;
     height: 252px;
     object-fit: cover;
     object-position: 20% 20%;
     filter: brightness(50%);
-}   
+}
 
 
 
@@ -155,9 +155,8 @@ body {
     color: white;
 }
 
-#about-content { 
+#about-content {
     color: white;
-   
 }
 
 #about {
@@ -178,7 +177,36 @@ body {
     background-color: #ffffff;
 }
 
+.modal {
+    display: none;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    overflow: hidden;
+    background-color: rgb(16, 15, 15);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+}
 
+/* Modal Content/Box */
+.modal-content {
+    margin: auto;
+    margin-top: 50px;
+    display: block;
+    width: 40%;
+    max-width: 700px;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+    background-color: transparent;
+    color: white;
+    border: hidden;
+}
+
+.row {
+    margin-left: 70px;
+    margin-right: 70px;
+}
 
 #contact {
     overflow: hidden;
@@ -191,10 +219,111 @@ body {
 }
 
 .footer {
-        height: 200px;
-        padding-top: 50px;
-        background-color: rgb(16, 15, 15);
-        color: white;
+    height: 200px;
+    padding-top: 50px;
+    background-color: rgb(16, 15, 15);
+    color: white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: block;
+    padding-top: 60px;
+    white-space: nowrap;
 }
 
 
+
+    .sidenav:hover {
+        left: 0;
+    }
+
+    .sidenav a {
+        display: block;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #fff;
+        white-space: nowrap;
+    }
+
+
+    .sidenav img {
+        height: 100px;
+        width: auto;
+    }
+
+    .sidenav div:hover {
+        color: #f1f1f1;
+    }
+
+
+
+.animated {
+    background-repeat: no-repeat;
+    background-position: left top;
+    padding-top: 95px;
+    margin-bottom: 60px;
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+        .sidenav div {
+            font-size: 18px;
+        }
+}
+
+@-webkit-keyframes fadeOut {
+    100% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+    }
+
+    0% {
+        opacity: 1;
+    }
+}
+
+.fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+}
+
+.animated {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: block;
+    padding-top: 60px;
+}
